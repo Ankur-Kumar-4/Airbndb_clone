@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+.home_page{
+    background-color: black;
+    padding-bottom: 50px;
+}
+nav{
+    color: white;
+    display: flex; 
+    align-items: center;
+    width: 95vw;
+    justify-content: space-around;
+    padding-top: 15px;
+    margin-inline:auto;
+}
+.navOptns{
+    display: flex;
+    gap: 32px;
+}
+.highlight{
+    border-bottom: 2px solid
+     white;
+    line-height: 25px;
+}
+.nav_user{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-left: 50px;
+}
+.nav_user>span{
+    font-weight: 500;
+}
+.search_bar{
+display: flex;
+gap: 32px;
+justify-content: space-around;
+align-items: center;
+margin-top: 5vh;
+background-color: white;
+width: 70vw;
+border-radius: 30px;
+margin-inline:auto;
+padding: 5px 0px;
+}
+.bl{
+
+    font-weight: 600;
+}
+.gr{
+    color: grey;
+}
+.hero>img{
+    width: 80vw;
+    height: 69vh;
+}
+.hero{
+    margin-inline:auto;
+    display: flex;
+    width: 80vw;
+    height: 69vh;
+    margin-top: 2vw;
+}
+
+.heading{
+font-weight: 500;
+font-size: 30px;
+}
+.cards{
+    margin-top: 5vw;
+    width: 80vw;
+    margin-inline: auto;
+}
+.card_container{
+display: flex;
+margin-top: 25px;
+gap: 35px;
+align-items: center;
+}
+.card>img{
+width: 17vw;
+height: 42vh;
+}
+.discoverExperiences{
+    margin-top: 5vw;
+    width: 80vw;
+    margin-inline: auto;
+}
+.Experiences{
+    display: flex;
+    margin-top: 25px;
+    gap: 50px;
+}
+.Experiences>img{
+width: 480px;
+height: 430px;
+}
+
+.shop_cards{
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shop_cards>img{
+width: 60vw;
+}
+
+.shop_card_detail{
+    margin-right: 5vw;
+}
+.shop_card_detail>p{
+font-weight: 500;
+font-size: 36px;
+}
+.learnMore{
+    margin-top: 20px;
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    padding: 15px 20px ;
+}
+.questionHosting{
+    margin-top: 70px;
+    width: 85vw;
+    margin-inline: auto;
+}
+.questionHosting>img{
+width: 85vw;
+}
+
+
+
+.inspiration_future{
+    margin-top: 70px;
+    margin-left:8vw;
+    width: 95vw;
+}
+.inspiration_future>img{
+    width: 95vw;
+}
+
+
+
+
+
+footer{
+    background-color:
+    #F9FAFB ;
+    margin-top: 80px;
+}
+.useful_links{
+    width: 98vw;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table,td{
+   padding:10px;
+}
+.hd{
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+}
+td{
+    font-size: 14px;
+    color: #4B5563;
+    margin-left: 80px;
+}
+
+.copyright{
+    margin-top: 30px;
+    width: 90vw;
+    margin-inline: auto;
+    padding-bottom: 20px;
+}
+.copyright>img{
+    width: 90vw;
+}
