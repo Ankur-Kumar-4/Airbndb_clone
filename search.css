@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+    padding-bottom: 12px;
+    margin-inline:auto;
+    position:fixed;
+    top:0;
+    z-index: 2000;
+    background-color: white;
+}
+.search{
+    margin-left: 12vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1000px;
+    padding: 6px 4px 6px 22px;
+    
+    gap: 16px;
+    border: 1px solid var(--gray-200, #E5E7EB);
+    background: var(--white, #FFF);
+
+    box-shadow: 0px 4px 6px 0px rgba(31, 41, 55, 0.10), 0px 2px 4px 0px rgba(31, 41, 55, 0.06);
+    font-size: 14px;
+    font-weight: 500;
+}
+.vl{
+    width: 1px;
+    background: var(--gray-500, #E5E7EB);
+    height:24px;
+}
+.nav_user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile{
+    border-radius: 100px;
+    border: 1px solid var(--gray-200, #E5E7EB); 
+}
+
+.filter_buttons_container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 24px 16px 24px;
+    margin-top: 10vh;
+    overflow-x: scroll;
+    width: 97vw;
+    margin-inline: auto;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.filter_buttons{
+    padding: 8px 16px;
+    gap: 8px;
+    display: flex;
+    min-width: fit-content;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid var(--gray-200, #E5E7EB);
+    background: var(--white, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(31, 41, 55, 0.08);
+    font-size: 14px;
+
+}
+main{
+    display: flex;
+}
+
+
+#listings{
+    flex: 4;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.status{
+font-size: 16px;
+color: var(--gray-500, #6B7280);
+margin-left: 3vw;
+margin-top: 6vh;
+}
+
+hr{
+width: 40vw;
+margin-left: 3vw;
+margin-top: 2.5vw;
+height: 1px;
+background-color: #E5E7EB;
+border: none;
+}
+
+.listing_item{
+    display: flex;
+
+}
+
+.listing_info{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+#map{
+    flex: 3;
+}
