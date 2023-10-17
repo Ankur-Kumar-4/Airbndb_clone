@@ -94,14 +94,14 @@ main{
 .status{
 font-size: 16px;
 color: var(--gray-500, #6B7280);
-margin-left: 3vw;
-margin-top: 6vh;
+margin-left: 2vw;
+margin-top: 5vh;
 }
 
 hr{
-width: 40vw;
-margin-left: 3vw;
-margin-top: 2.5vw;
+width: 50vw;
+margin-left: 2vw;
+margin-top: 2vw;
 height: 1px;
 background-color: #E5E7EB;
 border: none;
@@ -109,17 +109,61 @@ border: none;
 
 .listing_item{
     display: flex;
+    margin-top: 3vh;
+    margin-left: 2vw;
+    gap: 2vw;
+}
+.listing_image{
+    border-radius: 10px;
+    width: 300px;
+    height:200px;
 
 }
-
 .listing_info{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+    justify-content: space-around;
+    flex: 1 0 0; 
 }
 
+.plotName{
+    color: var(--gray-700, #374151);
+    font-size: 20px;
+    font-weight: 500;
+}
 
+.detail{
+color: var(--gray-500, #6B7280);
+font-size: 14px;
+}
 
+.list_footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 27vw;
+}
+.list_footer>div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.price{
+    margin-right: 18px;
+    color: var(--gray-700, #374151);
+    font-size: 18px;
+    font-weight: 500;
+
+}
+.footerInfo{
+    color: var(--gray-700, #374151);
+    font-size: 14px;
+}
 
 #map{
-    flex: 3;
+flex: 3.5;
+background-image: url("Map.png");
+height: 76.8vh;
 }

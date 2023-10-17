@@ -38,25 +38,81 @@ nav{
 }
 .search_bar{
 display: flex;
-gap: 32px;
-justify-content: space-around;
+gap: 2px;
 align-items: center;
 margin-top: 9vh;
 background-color: white;
 width: 70vw;
-border-radius: 30px;
+height: 10vh;
+border-radius: 5vw;
 margin-inline:auto;
-padding: 5px 0px;
+
 }
 .bl{
     font-size: 13px;
     line-height: 22px;
     font-weight: 600;
 }
-.gr{
-    color: grey;
-    font-size: 13px;
+.inputeField{
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
 }
+.gr{
+    color: var(--gray-500, #6B7280); 
+    font-size: 14px;
+}
+
+.vl{
+    width: 1px;
+    background: var(--gray-500, #E5E7EB);
+    height:30px;
+}
+
+.location{
+
+    width: 20vw;
+    border-radius: 5vw;
+    height: 10vh;
+    padding-left:25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.checkin,.checkout{
+
+    width: 10vw;
+    border-radius: 5vw;
+    height: 10vh;
+    padding-left:25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.addGuests{
+   
+    display: flex;
+    align-items: center;
+    width: 22vw;
+    border-radius: 5vw;
+    height: 10vh;
+    padding-left:25px;
+    justify-content: space-between;
+}
+.addGuests>img{
+width: 4vw;
+padding-right: 0.3vw;
+}
+
+
+.change_grey:hover{
+    background-color: #ebebeb;
+}
+
+
 
 .hero{
     margin-inline:auto;
