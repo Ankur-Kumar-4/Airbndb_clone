@@ -38,7 +38,7 @@ nav{
 }
 .search_bar{
 display: flex;
-gap: 2px;
+gap: 10px;
 align-items: center;
 margin-top: 9vh;
 background-color: white;
@@ -46,14 +46,16 @@ width: 70vw;
 height: 10vh;
 border-radius: 5vw;
 margin-inline:auto;
+box-sizing: border-box;
+padding: 1px 4px;
 
 }
 .bl{
-    font-size: 13px;
+    font-size: 15px;
     line-height: 22px;
     font-weight: 600;
 }
-.inputeField{
+.inputeField,.date{
     border: none;
     outline: none;
     background: transparent;
@@ -83,10 +85,10 @@ margin-inline:auto;
 
 .checkin,.checkout{
 
-    width: 10vw;
+    width: 11vw;
     border-radius: 5vw;
     height: 10vh;
-    padding-left:25px;
+    padding-inline:10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,7 +98,7 @@ margin-inline:auto;
    
     display: flex;
     align-items: center;
-    width: 22vw;
+    width: 18vw;
     border-radius: 5vw;
     height: 10vh;
     padding-left:25px;
@@ -112,8 +114,50 @@ padding-right: 0.3vw;
     background-color: #ebebeb;
 }
 
+.dropdown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28vw;
+    height: 27vw;
+    position: relative;
+    bottom: 74vh;
+    left: 56vw;
+    gap: 1px;
+    box-sizing: border-box;
+    z-index: 1800;
+    background-color: white;
+    border-radius: 3vw;
+    padding: 5px 40px;
+}
 
+.hide_dropdown{
+    display: none;
+}
+.show_dropdown{
+    display: flex;
+}
+.dropdown>div{
+display: flex; 
+justify-content: space-between;
+width: 100%;
 
+padding-top: 12px;
+}
+hr{
+    width: 23vw;
+    margin-left: 2vw;
+    margin-top: 2vw;
+    height: 1px;
+    background-color: #E5E7EB;
+    border: none;
+    }
+.guests_input{
+    width: 35px;
+    height: 30px;
+    font-size: 18px;
+    outline: none;
+}
 .hero{
     margin-inline:auto;
     align-items: center;

@@ -1,232 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Airbnb</title>
-    <link rel="shortcut icon" href="assets\icons8-airbnb-96.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    
-<section class="home_page">
-<nav>
-    <img src="assets\Logo.svg" alt="">
+    <link
+      rel="shortcut icon"
+      href="assets\icons8-airbnb-96.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="home_page">
+      <nav>
+        <img src="assets\Logo.svg" alt="" />
 
         <div class="navOptns">
-            <span class="highlight">Place to stay</span>
-            <span>Experiences</span>
-            <span>Online Experiences</span>
+          <span class="highlight">Place to stay</span>
+          <span>Experiences</span>
+          <span>Online Experiences</span>
         </div>
 
         <div class="nav_user">
-             <span>Become a Host</span>
-             <img src="assets\globe.svg" alt="">
-             <img src="assets\Profile Dropdown.svg" alt="">
+          <span>Become a Host</span>
+          <img src="assets\globe.svg" alt="" />
+          <img src="assets\Profile Dropdown.svg" alt="" />
         </div>
-         
-</nav>
+      </nav>
 
-<div class="search_bar">
+      <div class="search_bar">
+        <div class="location change_grey">
+          <p class="bl">Location</p>
+          <input
+            type="text"
+            id="location"
+            class="inputeField"
+            placeholder="Where are you going?"
+          />
+        </div>
 
-    <div class="location change_grey">
-    <p class="bl">Location</p>
-    <input type="text" class="inputeField" placeholder="Where are you going?">
+        <div class="vl"></div>
 
-    </div>
+        <div class="checkin change_grey">
+          <p class="bl">Check in</p>
+          <input type="date" id="ckeckin" class="date" />
+        </div>
 
-    <div class="vl"></div>
+        <div class="vl"></div>
 
-    <div class="checkin change_grey">
-    <p class="bl">Check in</p>
-    <p class="gr">Add dates</p>
-    </div>
+        <div class="checkout change_grey">
+          <p class="bl">Check out</p>
+          <!-- <p class="gr">Add dates</p> -->
+          <input type="date" id="checkout" class="date" />
+        </div>
 
-    <div class="vl"></div>
+        <div class="vl"></div>
 
-    <div class="checkout change_grey">
-    <p class="bl">Check out</p>
-    <p class="gr">Add dates</p>
-    </div>
-
-    <div class="vl"></div>
-
-    <div class="addGuests change_grey">
-
-        <div>
-
+        <div class="addGuests change_grey" id="display_dropdown">
+          <div>
             <p class="bl">Guests</p>
             <p class="gr">Add guests</p>
+          </div>
         </div>
 
-    
-    <img src="assets\Icon Button.svg" alt="">
-    </div>
-</div>
-
-<div class="hero">
-          
-            <div>Not sure where to go? Perfect.</div>
-            <button> I’m flexible</button>
-            
-</div>
-
-</section>
-
-
-
-<main>
-
-
-
-    <div class="cards">
-
-        <span class="heading">Inspiration for your next trip</span>
-
-
-      <div class="card_container">
-
-         <div class="card">
-            <img src="assets\City Card.png" alt="">
-         </div>
-         <div class="card">
-            <img src="assets\City Card (3).png" alt="">
-         </div>
-         <div class="card">
-            <img src="assets\City Card (1).png" alt="">
-         </div>
-         <div class="card">
-            <img src="assets\City Card (2).png" alt="">
-         </div>
-
+        <img id="searchBtn" src="assets\Icon Button.svg" alt="" />
       </div>
 
-    </div>
-  
+      <div class="hero">
+        <div>Not sure where to go? Perfect.</div>
+        <button>I’m flexible</button>
+      </div>
 
+      <div id="dropDown" class="dropdown hide_dropdown">
+        <div>
+          <div>
+            <span class="bl">Adults</span> <br />
+            <span class="gr">Ages 13 or above</span>
+          </div>
 
-    <div class="discoverExperiences">
+          <input
+            value="0"
+            min="0"
+            max="16"
+            id="adults_guests"
+            class="guests_input"
+            type="number"
+          />
+        </div>
 
+        <hr />
+
+        <div>
+          <div>
+            <span class="bl">Children</span> <br />
+            <span class="gr">Ages 2–12</span>
+          </div>
+
+          <input
+            value="0"
+            min="0"
+            max="16"
+            id="children_guests"
+            class="guests_input"
+            type="number"
+          />
+        </div>
+
+        <hr />
+
+        <div>
+          <div>
+            <span class="bl">Infants</span> <br />
+            <span class="gr">Under 2</span>
+          </div>
+
+          <input
+            value="0"
+            min="0"
+            max="16"
+            id="infants_guests"
+            class="guests_input"
+            type="number"
+          />
+        </div>
+
+        <hr />
+
+        <div>
+          <div>
+            <span class="bl">Pets</span> <br />
+            <span class="gr"></span>
+          </div>
+
+          <input
+            value="0"
+            min="0"
+            max="16"
+            id="pet_guests"
+            class="guests_input"
+            type="number"
+          />
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <div class="cards">
+        <span class="heading">Inspiration for your next trip</span>
+
+        <div class="card_container">
+          <div class="card">
+            <img src="assets\City Card.png" alt="" />
+          </div>
+          <div class="card">
+            <img src="assets\City Card (3).png" alt="" />
+          </div>
+          <div class="card">
+            <img src="assets\City Card (1).png" alt="" />
+          </div>
+          <div class="card">
+            <img src="assets\City Card (2).png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="discoverExperiences">
         <span class="heading">Discover Airbnb Experiences</span>
 
         <div class="Experiences">
-            <img src="assets\unsplash_qvO4yjZo-Mc.png" alt="">
-            <img src="assets\unsplash_JYTWsPsIDcY.png" alt="">
+          <img src="assets\unsplash_qvO4yjZo-Mc.png" alt="" />
+          <img src="assets\unsplash_JYTWsPsIDcY.png" alt="" />
+        </div>
+      </div>
+
+      <div class="shop_cards">
+        <div class="shop_card_detail">
+          <p>Shop Airbnb</p>
+          <p>gift cards</p>
+
+          <button class="learnMore">Learn more</button>
         </div>
 
-    </div>
+        <img src="assets\Gift Cards.svg" alt="" />
+      </div>
 
-    <div class="shop_cards">
+      <div class="questionHosting">
+        <img src="assets\unsplash_SV3e7hGlVnc.svg" alt="" />
+      </div>
 
-            <div class="shop_card_detail">
+      <div class="inspiration_future">
+        <img src="assets\Pre-Footer.svg" alt="" />
+      </div>
+    </main>
 
-                <p>Shop Airbnb</p>
-                <p>gift cards</p>
-
-            <button class="learnMore">Learn more</button>
-            </div>
-
-
-        <img src="assets\Gift Cards.svg" alt="">
-    </div>
-
-
-    <div class="questionHosting">
-    <img src="assets\unsplash_SV3e7hGlVnc.svg" alt="">
-    </div>
-
-
-
-
-
-    <div class="inspiration_future">
-        <img src="assets\Pre-Footer.svg" alt="">
-    </div>
-
-</main>
-
-<footer>
-
-    <div class="useful_links">
-     <table>
-
-        <thead>
+    <footer>
+      <div class="useful_links">
+        <table>
+          <thead>
             <td class="hd">support</td>
-            <td  class="hd">Community</td>
-            <td  class="hd">Hosting</td>
-            <td class="hd">About</td> 
-        </thead>
+            <td class="hd">Community</td>
+            <td class="hd">Hosting</td>
+            <td class="hd">About</td>
+          </thead>
 
-        <tbody>
-
-
+          <tbody>
             <tr>
-                <td>Help Center</td>
-                <td>Airbnb.org: disaster relief housing</td>
-                <td>Try hosting</td>
-                <td>Newsroom</td>
+              <td>Help Center</td>
+              <td>Airbnb.org: disaster relief housing</td>
+              <td>Try hosting</td>
+              <td>Newsroom</td>
             </tr>
 
             <tr>
-               <td>Safety information</td>
-               <td>Support: Afghan refugees</td>
-               <td>AirCover: protection for Hosts</td>
-               <td>Learn about new features</td>
+              <td>Safety information</td>
+              <td>Support: Afghan refugees</td>
+              <td>AirCover: protection for Hosts</td>
+              <td>Learn about new features</td>
             </tr>
-            
+
             <tr>
-               <td>Cancellation options</td>
-               <td>Celebrating diversity & belonging</td>
-               <td>Explore hosting resources</td>
-               <td>Letter from our founders</td>
+              <td>Cancellation options</td>
+              <td>Celebrating diversity & belonging</td>
+              <td>Explore hosting resources</td>
+              <td>Letter from our founders</td>
             </tr>
-            
+
             <tr>
-               <td>Our COVID-19 Response</td>
-               <td>Combating discriminatino</td>
-               <td>Visit our community forum</td>
-               <td>Careers</td>
+              <td>Our COVID-19 Response</td>
+              <td>Combating discriminatino</td>
+              <td>Visit our community forum</td>
+              <td>Careers</td>
             </tr>
-            
+
             <tr>
-               <td>Supporting people with disabilities</td>
-               <td></td>
-               <td>How to host responsibly</td>
-               <td>Investors</td>
+              <td>Supporting people with disabilities</td>
+              <td></td>
+              <td>How to host responsibly</td>
+              <td>Investors</td>
             </tr>
-            
+
             <tr>
-               <td>Report a neighborhoood concern</td>
-               <td></td>
-               <td>       </td>
-               <td>Airbnb Luxe</td>
+              <td>Report a neighborhoood concern</td>
+              <td></td>
+              <td></td>
+              <td>Airbnb Luxe</td>
             </tr>
+          </tbody>
+        </table>
+      </div>
 
+      <div class="copyright">
+        <img src="assets\Kicker.svg" alt="" />
+      </div>
+    </footer>
 
-
-
-
-
-        </tbody>
-     </table>
-    </div>
-
-
-
-
-    <div class="copyright">
-        <img src="assets\Kicker.svg" alt="">
-    </div>
-  
-</footer>
-
-
-
-
-
+   
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
