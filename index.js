@@ -28,16 +28,6 @@ document.addEventListener("scroll", () => {
 
 searchButton.addEventListener("click", () => {
    
-
-    
-    // Update myObject with the latest values
-    // inputValues.location = location_input.value;
-    // inputValues.checkIn = checkinDate.value;
-    // inputValues.checkOut = checkoutDate.value;
-    // inputValues.adults = adults_guests.value;
-    // inputValues.children = children_guests.value;
-    // inputValues.infants = infants_guests.value;
-    // inputValues.pets = pet_guests.value;
     const inputValues = {
       location: location_input.value,
       checkIn: checkinDate.value,

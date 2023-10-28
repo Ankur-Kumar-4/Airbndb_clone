@@ -162,8 +162,10 @@ font-size: 14px;
     font-size: 14px;
 }
 
+.map{
+height: 79.5vh;
+}
 #map{
 flex: 3.5;
-background-image: url("Map.png");
-height: 76.8vh;
+height: 79.5vh;
 }

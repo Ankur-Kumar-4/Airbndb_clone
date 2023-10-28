@@ -45,6 +45,8 @@ try {
   console.error(error);
 }
 
+const map = document.getElementById("map");
+
 const placeName = (document.getElementById("placeName").innerHTML = location);
 
 const duration = (document.getElementById("duration").innerHTML = checkIn);
@@ -104,3 +106,40 @@ function renderCount(data) {
     displayListing(i);
   }
 }
+
+function renderMap() {
+    let mapContainer = document.createElement("div");
+    mapContainer.className="map";
+    mapContainer.innerHTML=`
+    <iframe src="https://maps.google.com/maps?q=35.856737, 10.606619&z=15&output=embed" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+    
+    `
+    map.appendChild(mapContainer);
+    
+};
+renderMap();
+
+
+
+// let map;
+// function initMap() {
+//     map = new google.maps.Map(document.getElementById('map'), {
+//       center: { lat: 35.856737, lng: 10.606619 },
+//       zoom: 15,
+//     });
+    
+//     const markers = [
+//     { position: { lat: 35.856737, lng: 10.606619 }, title: 'Marker 1' },
+//     { position: { lat: 35.860000, lng: 10.610000 }, title: 'Marker 2' },
+//     // Add more markers as needed
+//   ];
+
+//   markers.forEach(markerInfo => {
+//     new google.maps.Marker({
+//       position: markerInfo.position,
+//       map: map,
+//       title: markerInfo.title,
+//     });
+// }); 
+// }
+// initMap()
