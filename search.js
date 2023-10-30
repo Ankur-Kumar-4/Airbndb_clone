@@ -56,39 +56,36 @@ const guestsNo = (document.getElementById("guestsNo").innerHTML =
 
 const listingContainer = document.getElementById("listingContainer");
 
-function displayListing(i) {
+function displayListing(i, itemData) {
   const hr = document.createElement("hr");
   const listing = document.createElement("div");
   listing.className = "listing_item";
 
   listing.innerHTML = `
         
-    <img class="listing_image" src="Image.png" alt="" />
+  <img class="listing_image" src="${getFirstImage(itemData)}" alt="" />
 
-            <div class="listing_info">
-              <div>
-                <div class="detail">Entire home in ${data.result[i].city}</div>
-
-                <div class="plotName">${data.result[i].name}</div>
-              </div>
-
-              <div class="detail">
-                4-6 guests · Entire Home · ${data.result[i].bedrooms} beds · ${data.result[i].bathrooms} bath<br />
-                Wifi · Kitchen · Free Parking
-              </div>
-
-              <div class="list_footer">
-                <div>
-                  ${data.result[i].rating} <img src="${data.result[i].images[0]}" alt="" />
-                  <span class="footerInfo"> (${data.result[i].reviewsCount} reviews)</span>
-                </div>
-
-                <div class="price">
-                  $${data.result[i].price.rate} <span class="footerInfo">/night</span>
-                </div>
-              </div>
-            </div>
-    
+  <div class="listing_info">
+    <div>
+      <div class="detail">Entire home in ${itemData.city}</div>
+      <div class="plotName">${itemData.name}</div>
+    </div>
+    <div class="detail">
+      4-6 guests · Entire Home · ${itemData.bedrooms} beds · ${
+    itemData.bathrooms
+  } bath<br />
+      Wifi · Kitchen · Free Parking
+    </div>
+    <div class="list_footer">
+      <div>
+        ${itemData.rating} <img src="assets/star (1).svg" alt="" />
+        <span class="footerInfo"> (${itemData.reviewsCount} reviews)</span>
+      </div>
+      <div class="price">
+        $${itemData.price.rate} <span class="footerInfo">/night</span>
+      </div>
+    </div>
+  </div>
     
     `;
 
@@ -102,24 +99,32 @@ function renderCount(data) {
     return;
   }
   console.log("there is data", data);
-  for (let i = 0; i < data.result?.length; i++) {
-    displayListing(i);
+  for (let i = 0; i < data.results.length; i++) {
+    if (data.results[i] && data.results[i].city) {
+      displayListing(i, data.results[i]);
+    } else {
+      console.log("Data for index " + i + " is missing or incomplete.");
+    }
   }
 }
+function getFirstImage(itemData) {
+  if (itemData && itemData.images && itemData.images.length > 0) {
+    return itemData.images[0];
+  }
+  // Return a placeholder image URL or an empty string if no images are available.
+  return "placeholder_image_url.jpg";
+}
+// function renderMap() {
+//     let mapContainer = document.createElement("div");
+//     mapContainer.className="map";
+//     mapContainer.innerHTML=`
+//     <iframe src="https://maps.google.com/maps?q=35.856737, 10.606619&z=15&output=embed" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
 
-function renderMap() {
-    let mapContainer = document.createElement("div");
-    mapContainer.className="map";
-    mapContainer.innerHTML=`
-    <iframe src="https://maps.google.com/maps?q=35.856737, 10.606619&z=15&output=embed" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
-    
-    `
-    map.appendChild(mapContainer);
-    
-};
-renderMap();
+//     `
+//     map.appendChild(mapContainer);
 
-
+// };
+// renderMap();
 
 // let map;
 // function initMap() {
@@ -127,7 +132,7 @@ renderMap();
 //       center: { lat: 35.856737, lng: 10.606619 },
 //       zoom: 15,
 //     });
-    
+
 //     const markers = [
 //     { position: { lat: 35.856737, lng: 10.606619 }, title: 'Marker 1' },
 //     { position: { lat: 35.860000, lng: 10.610000 }, title: 'Marker 2' },
@@ -140,6 +145,6 @@ renderMap();
 //       map: map,
 //       title: markerInfo.title,
 //     });
-// }); 
+// });
 // }
 // initMap()
